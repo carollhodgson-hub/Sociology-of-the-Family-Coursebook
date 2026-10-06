@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <style id="accessible-font">body{font-family:Arial,Helvetica,sans-serif!important}</style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Understanding the Family in Modern Society | SOC-213 Coursebook</title>
+    <meta
+      name="description"
+      content="Table of contents for Understanding the Family in Modern Society: how families guide, protect, and prepare the next generation."
+    />
+    <meta name="author" content="Caroll Hodgson and Jessica Norwood" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2317384a'/%3E%3Cpath d='M13 30 32 14l19 16v22H13Z' fill='%23fffaf0'/%3E%3Cpath d='M24 52V35h16v17' fill='%230d5961'/%3E%3C/svg%3E"
+    />
+    <style>
+      :root {
+        --navy: #17384a;
+        --teal: #0d5961;
+        --gold: #e1a63a;
+        --coral: #d96e50;
+        --paper: #fffef9;
+        --ink: #22313a;
+        --muted: #5d6a70;
+        --line: #d9e2df;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background: #f3f0e8;
+        color: var(--ink);
+        font:
+          17px/1.6 Georgia,
+          "Times New Roman",
+          serif;
+      }
+      a:focus-visible {
+        outline: 4px solid #ffd76d;
+        outline-offset: 4px;
+      }
+      .skip {
+        position: absolute;
+        left: -9999px;
+        top: 8px;
+        background: white;
+        padding: 10px 14px;
+        z-index: 5;
+      }
+      .skip:focus {
+        left: 8px;
+      }
+      .top {
+        background: var(--navy);
+        color: white;
+        padding: 15px 5%;
+        font: 700 15px Arial;
+      }
+      .top-inner {
+        max-width: 1180px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+      }
+      .course {
+        letter-spacing: 0.08em;
+      }
+      .access {
+        color: #cce5df;
+        font-weight: 400;
+      }
+      .hero {
+        background:
+          linear-gradient(
+            115deg,
+            rgba(23, 56, 74, 0.97),
+            rgba(13, 89, 97, 0.92)
+          ),
+          url("assets/family-modern-society-cover.png") center/cover;
+        color: white;
+        padding: clamp(48px, 8vw, 95px) 5%;
+      }
+      .hero-inner {
+        max-width: 1180px;
+        margin: auto;
+      }
+      .eyebrow {
+        font: 800 13px Arial;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        color: #f6cc73;
+      }
+      .hero h1 {
+        max-width: 850px;
+        font-size: clamp(42px, 7vw, 78px);
+        line-height: 0.98;
+        margin: 18px 0;
+      }
+      .hero p {
+        max-width: 760px;
+        font-size: clamp(19px, 2.5vw, 24px);
+        line-height: 1.45;
+        margin: 0;
+      }
+      .byline {
+        display: inline-block;
+        margin-top: 22px;
+        border: 1px solid #ffffff66;
+        border-radius: 999px;
+        padding: 9px 15px;
+        font: 700 14px Arial;
+      }
+      main {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 38px 18px 80px;
+      }
+      .intro {
+        display: grid;
+        grid-template-columns: 1.25fr 0.75fr;
+        gap: 22px;
+        align-items: stretch;
+        margin-bottom: 28px;
+      }
+      .intro-card,
+      .guide {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 26px;
+      }
+      .intro h2 {
+        font-size: clamp(28px, 4vw, 42px);
+        line-height: 1.1;
+        color: var(--navy);
+        margin: 0.2em 0;
+      }
+      .guide {
+        background: #eaf6f3;
+        border-top: 6px solid var(--teal);
+      }
+      .guide strong {
+        font-family: Arial;
+        color: var(--navy);
+      }
+      .project-link {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 14px;
+        border-radius: 10px;
+        background: var(--navy);
+        color: white;
+        text-decoration: none;
+        font: 800 14px Arial, sans-serif;
+      }
+      .toc-title {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 18px;
+        margin: 38px 0 18px;
+      }
+      .toc-title h2 {
+        font-size: clamp(30px, 4vw, 46px);
+        color: var(--navy);
+        margin: 0;
+      }
+      .toc-title p {
+        color: var(--muted);
+        margin: 0;
+      }
+      .sections {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+      .section-card {
+        display: block;
+        position: relative;
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 25px;
+        text-decoration: none;
+        color: var(--ink);
+        min-height: 220px;
+        box-shadow: 0 8px 25px #17384a0d;
+        transition:
+          transform 0.18s,
+          box-shadow 0.18s,
+          border-color 0.18s;
+      }
+      .section-card.available:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 14px 30px #17384a1c;
+        border-color: var(--teal);
+      }
+      .number {
+        font: 900 44px/1 Arial;
+        color: var(--gold);
+      }
+      .section-card h3 {
+        font: 800 24px/1.2 Arial;
+        color: var(--navy);
+        margin: 12px 0;
+      }
+      .section-card p {
+        margin: 0;
+        color: #44545c;
+      }
+      .topics {
+        display: block;
+        margin-top: 15px;
+        font: 14px/1.45 Arial;
+        color: var(--muted);
+      }
+      .open {
+        position: absolute;
+        right: 22px;
+        top: 23px;
+        background: var(--teal);
+        color: white;
+        border-radius: 999px;
+        padding: 7px 11px;
+        font: 800 12px Arial;
+      }
+      .planned {
+        background: #f5f3ed;
+        color: #606a6e;
+      }
+      .planned .open {
+        background: #d9dedc;
+        color: #4d5a5e;
+      }
+      .planned .number {
+        color: #aab3af;
+      }
+      .section-card.featured {
+        border-top: 7px solid var(--coral);
+      }
+      .section-card.featured .open {
+        background: var(--coral);
+      }
+      .book-note {
+        margin-top: 28px;
+        background: var(--navy);
+        color: white;
+        border-radius: 20px;
+        padding: 25px;
+        display: flex;
+        gap: 18px;
+        align-items: center;
+      }
+      .book-note .icon {
+        font-size: 38px;
+      }
+      .book-note strong {
+        font: 800 18px Arial;
+        color: #f6cc73;
+      }
+      .book-note p {
+        margin: 4px 0 0;
+      }
+      .accessibility-panel {
+        margin-top: 28px;
+        background: var(--paper);
+        border: 2px solid var(--teal);
+        border-radius: 20px;
+        padding: 26px;
+      }
+      .accessibility-panel h2 {
+        margin: 0 0 10px;
+        color: var(--navy);
+        font: 800 clamp(25px, 3vw, 34px)/1.2 Arial, sans-serif;
+      }
+      .accessibility-panel a { color: #075f78; font-weight: 700; }
+      .footer {
+        text-align: center;
+        color: var(--muted);
+        padding: 25px;
+        font: 14px Arial;
+      }
+      @media (max-width: 760px) {
+        .top-inner,
+        .toc-title,
+        .book-note {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+        .intro,
+        .sections {
+          grid-template-columns: 1fr;
+        }
+        .access {
+          font-size: 13px;
+        }
+        .hero {
+          padding-top: 52px;
+        }
+        .section-card {
+          min-height: 0;
+        }
+      }
+      @media print {
+        .top {
+          display: none;
+        }
+        .hero {
+          color: var(--navy);
+          background: white;
+          padding: 25px 0;
+        }
+        .hero .eyebrow,
+        .byline {
+          color: var(--navy);
+          border-color: var(--navy);
+        }
+        .section-card {
+          break-inside: avoid;
+          box-shadow: none;
+        }
+        .open {
+          border: 1px solid currentColor;
+        }
+        .book-note {
+          color: var(--ink);
+          background: white;
+          border: 1px solid var(--line);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip" href="#contents">Skip to table of contents</a>
+    <header class="top">
+      <div class="top-inner">
+        <div class="course">SOC-213 • DIGITAL COURSEBOOK</div>
+        <div class="access">Understanding the Family in Modern Society</div>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="eyebrow">Sociology of the Family</div>
+        <h1>Understanding the Family in Modern Society</h1>
+        <p>
+          How families guide, protect, and prepare the next generation
+        </p>
+        <span class="byline">By Caroll Hodgson and Jessica Norwood</span>
+      </div>
+    </section>
+    <main id="contents">
+      <section class="intro" aria-labelledby="welcome">
+        <div class="intro-card">
+          <div class="eyebrow" style="color: var(--coral)">
+            Welcome to the book
+          </div>
+          <h2 id="welcome">A coursebook with a guiding perspective</h2>
+          <p>
+            This coursebook examines family as both a personal relationship
+            network and a social institution connected to culture, law,
+            education, work, healthcare, inequality, and social change.
+          </p>
+          <p>
+            Its central question is not whether families should reproduce one
+            fixed historical model. It is how families—and the institutions
+            surrounding them—can help children develop safety, belonging,
+            judgment, resilience, and the knowledge needed to enter adult roles
+            in the society they will actually inhabit.
+          </p>
+        </div>
+        <aside class="guide">
+          <strong>Guiding idea</strong>
+          <p>
+            Families help prepare the next generation for adult life. As
+            technology, work, education, relationships, and public life change,
+            guidance must change too. Core commitments—care, dignity,
+            responsibility, honesty, cooperation, and nonviolence—can remain
+            while the skills used to live those values evolve.
+          </p>
+          <a class="project-link" href="family-book-project.html">Open the Family Book Project</a>
+          <a class="project-link" href="#accessibility-privacy">Accessibility &amp; privacy</a>
+        </aside>
+      </section>
+      <div class="toc-title">
+        <div>
+          <div class="eyebrow" style="color: var(--coral)">Book contents</div>
+          <h2>Eight sections</h2>
+        </div>
+        <p>Sections marked “Open” are ready to explore.</p>
+      </div>
+      <nav class="sections" aria-label="Textbook sections">
+        <a class="section-card available featured" href="section1.html"
+          ><span class="open">Open section</span><span class="number">01</span>
+          <h3>What Is the Family as a Social Institution?</h3>
+          <p>
+            Begin with the family’s socializing role, then examine relationship
+            patterns, structure, culture, change, and diversity.
+          </p>
+          <span class="topics"
+            >1.1 Family institution • 1.2 Marriage • 1.3 Structure • 1.4 Culture
+            • 1.5 Change • 1.6 Diversity • 1.7 Review</span
+          ></a
+        >
+        <a class="section-card available" href="section2.html"
+          ><span class="open">Open section</span><span class="number">02</span>
+          <h3>Studying the Family Institution</h3>
+          <p>
+            Learn how sociologists develop questions, collect evidence, evaluate
+            research quality, and apply theoretical perspectives.
+          </p>
+          <span class="topics"
+            >2.1 Studying families • 2.2 Social change • 2.3 Methods • 2.4
+            Theories • 2.5 Review</span
+          ></a
+        >
+        <a class="section-card available" href="section3.html"
+          ><span class="open">Open section</span><span class="number">03</span>
+          <h3>Socialization and Gender</h3>
+          <p>
+            Chromosomes and sex development, gender and identity, historical
+            reproductive blame, socialization, inequality, and power.
+          </p>
+          <span class="topics"
+            >3.1 Sex, gender, and identity • 3.2 Socialization • 3.3 Roles • 3.4
+            Inequality • 3.5 Global issues • 3.6 Review</span
+          ></a
+        >
+        <a class="section-card available" href="section4.html">
+          <span class="open">Open section</span><span class="number">04</span>
+          <h3>The Economy and Family Life</h3>
+          <p>
+            Economic systems, social class, wealth, poverty, gendered work,
+            inequality, and work–family balance.
+          </p>
+          <span class="topics">4.1 Economy • 4.2 Class, wealth, poverty, taxes and benefits • 4.3 Gender and work • 4.4 Family policy and balance • 4.5 Review</span>
+        </a>
+        <a class="section-card available" href="section5.html">
+          <span class="open">Open section</span><span class="number">05</span>
+          <h3>Singlehood, Cohabitation, Marriage, and Communication</h3>
+          <p>
+            Relationship opportunities and pathways, contemporary marriage, the
+            life course, and communication skills.
+          </p>
+          <span class="topics">5.1 Singlehood • 5.2 Cohabitation • 5.3 Marriage • 5.4 Life course • 5.5 Communication • 5.6 Review</span>
+        </a>
+        <a class="section-card available" href="section6.html"
+          ><span class="open">Open section</span><span class="number">06</span>
+          <h3>Family Formation, Parenting, and Development</h3>
+          <p>
+            Fertility and family choices, development, attachment, parenting
+            styles, modern guidance, and epigenetics.
+          </p>
+          <span class="topics"
+            >6.1 Formation • 6.2 Development • 6.3 Attachment • 6.4 Parenting
+            styles • 6.5 Guidance • 6.6 Epigenetics</span
+          ></a
+        >
+        <a class="section-card available" href="cycle-breaking.html">
+          <span class="open">Open section</span><span class="number">07</span>
+          <h3>Family Challenges, Stress, Abuse, and Violence</h3>
+          <p>
+            Postpartum mental health, family stress, disability caregiving,
+            violence, cycle breaking, mental health, substance use, and support.
+          </p>
+          <span class="topics">7.1 Postpartum mental health • 7.2 Stress and disability • 7.3 Violence • 7.4 Mental health and substance use • 7.5 Review</span>
+        </a>
+        <a class="section-card available" href="section8.html">
+          <span class="open">Open section</span><span class="number">08</span>
+          <h3>Family Change Across the Life Course</h3>
+          <p>
+            Separation, divorce, remarriage, stepfamilies, aging, caregiving,
+            and changing family roles.
+          </p>
+          <span class="topics">8.1 Separation and divorce • 8.2 Remarriage • 8.3 Stepfamilies • 8.4 Aging • 8.5 Grandparenting • 8.6 Caregiving • 8.7 Review</span>
+        </a>
+        <a class="section-card available featured" href="appendix-apa.html">
+          <span class="open">Open appendix</span><span class="number">APA</span>
+          <h3>Appendix: Using APA Style</h3>
+          <p>
+            Cite the new SOC-213 and SOC-245 coursebooks, practice paraphrasing,
+            connect in-text citations to references, and check common mistakes.
+          </p>
+          <span class="topics">Coursebook citations • In-text citations • References • APA Detective Lab • RCCC Library help</span>
+        </a>
+      </nav>
+      <aside class="book-note">
+        <div class="icon" aria-hidden="true">📘</div>
+        <div>
+          <strong>An interactive coursebook</strong>
+          <p>
+            All eight sections are ready to explore. Each includes learning
+            objectives, key terms, accessible visuals, optional practice
+            activities, project guidance, career connections, and references.
+          </p>
+        </div>
+      </aside>
+      <section class="accessibility-panel" id="accessibility-privacy" aria-labelledby="accessibility-title">
+        <div class="eyebrow" style="color: var(--coral)">Student access and privacy</div>
+        <h2 id="accessibility-title">Accessibility, accommodations, practice activities, and privacy</h2>
+        <p><strong>Accessibility commitment.</strong> This coursebook was designed and reviewed using WCAG 2.1 Level AA and ADA Title II accessibility principles. It uses semantic headings, keyboard-operable controls, visible keyboard focus, alternative text, labeled form controls, readable sans-serif type, responsive layouts, and reduced-motion support where animation appears. Accessibility is an ongoing process; an automated or editorial review cannot guarantee access for every person, device, or assistive technology.</p>
+        <p><strong>Disability access and accommodations.</strong> If a page, image, chart, video, download, or activity creates a barrier, contact the instructor and the college Disability Services/Accessibility Office using the contact information in the official syllabus or college website. An accessible alternative or reasonable accommodation will be provided as promptly as possible and without penalty.</p>
+        <p><strong>Practice—not grades.</strong> All sliders, quizzes, inventories, animations, planners, and other interactive activities in this coursebook are optional, ungraded practice. They are not required to earn points or demonstrate completion. The core concepts are also presented in text, tables, descriptions, explanations, and feedback. A student may skip an interaction or request an equivalent text-based activity without a grade penalty.</p>
+        <p><strong>Privacy.</strong> The coursebook does not ask students to create an account or submit identifying information. Answers entered in its practice tools are processed on the student’s device and are not sent to or saved by the authors. Do not enter names, diagnoses, family secrets, or other sensitive information. Submit graded work only through Canvas or another institutionally approved system. The hosting service and optional third-party content may process ordinary technical data under their own privacy policies; embedded video is optional and uses YouTube’s privacy-enhanced mode.</p>
+        <p><a href="accessibility-privacy-syllabus.html">Open the copy-ready syllabus statement and review summary</a></p>
+      </section>
+    </main>
+    <footer class="footer">
+      SOC-213 • Understanding the Family in Modern Society • Digital coursebook
+    </footer>
+    <script src="assets/career-connections.js" data-overview></script>
+  </body>
+</html>

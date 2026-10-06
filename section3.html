@@ -1,0 +1,2385 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <style id="accessible-font">body{font-family:Arial,Helvetica,sans-serif!important}</style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Sex, gender, chromosomes, socialization, and the historical social consequences of reproductive myths."
+    />
+    <title>Section Three: Socialization and Gender</title>
+    <style>
+      :root {
+        --navy: #17384a;
+        --teal: #0d5961;
+        --gold: #e1a63a;
+        --coral: #d96e50;
+        --paper: #fffef9;
+        --ink: #22313a;
+        --line: #d9e2df;
+        --soft: #eef7f5;
+        --purple: #674f82;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background: #f4f1e9;
+        color: var(--ink);
+        font:
+          17px/1.68 Georgia,
+          serif;
+      }
+      a {
+        color: var(--teal);
+        text-underline-offset: 3px;
+      }
+      button {
+        font: inherit;
+      }
+      a:focus-visible,
+      button:focus-visible,
+      summary:focus-visible {
+        outline: 4px solid #ffd76d;
+        outline-offset: 3px;
+      }
+      .skip {
+        position: absolute;
+        left: -9999px;
+      }
+      .skip:focus {
+        left: 10px;
+        top: 10px;
+        background: white;
+        padding: 10px;
+        z-index: 5;
+      }
+      .top {
+        background: var(--navy);
+        color: white;
+        padding: 17px 5%;
+        position: sticky;
+        top: 0;
+        z-index: 4;
+      }
+      .top a {
+        color: white;
+        font: 700 15px Arial;
+        text-decoration: none;
+        margin-right: 20px;
+      }
+      .hero {
+        background:
+          radial-gradient(circle at 82% 20%, #e1a63a44, transparent 22rem),
+          linear-gradient(135deg, var(--navy), var(--purple));
+        color: white;
+        padding: 64px max(6%, calc((100% - 1080px) / 2));
+      }
+      .hero h1 {
+        font-size: clamp(40px, 6vw, 68px);
+        line-height: 1;
+        margin: 0.25em 0;
+      }
+      .hero p {
+        font-size: 21px;
+        max-width: 800px;
+      }
+      .tag {
+        font: 800 13px Arial;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        color: var(--coral);
+      }
+      .hero .tag {
+        color: #ffd884;
+      }
+      .wrap {
+        max-width: 1080px;
+        margin: 28px auto 70px;
+        padding: 0 18px;
+      }
+      .card {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        padding: clamp(24px, 4vw, 46px);
+        margin: 22px 0;
+        box-shadow: 0 8px 28px #17384a12;
+      }
+      h2 {
+        font-size: clamp(29px, 4vw, 44px);
+        line-height: 1.13;
+        color: var(--navy);
+      }
+      h3 {
+        font-size: 25px;
+        color: var(--teal);
+        margin-top: 1.5em;
+      }
+      .lead {
+        font-size: 21px;
+        border-left: 5px solid var(--gold);
+        padding-left: 18px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+      }
+      .mini {
+        background: var(--soft);
+        border-radius: 14px;
+        padding: 18px;
+      }
+      .mini strong {
+        color: var(--navy);
+      }
+      .chromosome-model {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr auto 1.2fr;
+        align-items: center;
+        gap: 12px;
+        margin: 24px 0;
+      }
+      .gamete {
+        padding: 20px;
+        border-radius: 18px;
+        text-align: center;
+        background: white;
+        border: 3px solid var(--teal);
+        font: 800 19px Arial;
+        color: var(--navy);
+      }
+      .gamete span {
+        display: block;
+        font-size: 42px;
+        color: var(--coral);
+      }
+      .operator {
+        font: 800 31px Arial;
+        color: var(--purple);
+      }
+      .outcome {
+        padding: 18px;
+        border-radius: 18px;
+        background: var(--navy);
+        color: white;
+      }
+      .outcome strong {
+        color: #ffd884;
+      }
+      .figure {
+        margin: 24px 0;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        overflow: hidden;
+        background: white;
+      }
+      .figure img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .figure figcaption {
+        padding: 14px 18px;
+        font: 15px/1.5 Arial;
+        color: #536269;
+      }
+      .karyo {
+        display: grid;
+        grid-template-columns: 260px 1fr;
+        gap: 22px;
+        align-items: center;
+        background: var(--soft);
+        padding: 18px;
+        border-radius: 16px;
+      }
+      .karyo img {
+        width: 100%;
+        max-width: 241px;
+        margin: auto;
+        background: white;
+        border: 1px solid var(--line);
+      }
+      .caution {
+        background: #fff3d9;
+        border: 1px solid #e8c776;
+        border-radius: 14px;
+        padding: 18px;
+      }
+      .history {
+        background: #f4eef8;
+        border-left: 6px solid var(--purple);
+        padding: 20px;
+        border-radius: 14px;
+      }
+      .activity button {
+        width: 100%;
+        text-align: left;
+        border: 1px solid var(--line);
+        background: white;
+        padding: 15px;
+        margin: 6px 0;
+        border-radius: 11px;
+        cursor: pointer;
+        font: 700 16px Arial;
+        color: var(--navy);
+      }
+      .activity button[aria-expanded="true"] {
+        background: var(--teal);
+        color: white;
+      }
+      .feedback {
+        display: none;
+        padding: 5px 16px 15px;
+      }
+      .open + .feedback {
+        display: block;
+      }
+      .terms {
+        columns: 2;
+        column-gap: 28px;
+      }
+      .terms li {
+        break-inside: avoid;
+        margin: 10px 0;
+      }
+      .sources li {
+        margin: 13px 0;
+      }
+      .roadmap {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+      }
+      .roadmap div {
+        background: var(--soft);
+        padding: 17px;
+        border-radius: 13px;
+        border-top: 5px solid var(--gold);
+      }
+      @media (max-width: 760px) {
+        .grid,
+        .roadmap {
+          grid-template-columns: 1fr;
+        }
+        .chromosome-model {
+          grid-template-columns: 1fr;
+        }
+        .operator {
+          text-align: center;
+        }
+        .karyo {
+          grid-template-columns: 1fr;
+        }
+        .terms {
+          columns: 1;
+        }
+      }
+      @media print {
+        .top {
+          display: none;
+        }
+        .card {
+          box-shadow: none;
+        }
+        .feedback {
+          display: block;
+        }
+      }
+      .race-demo {
+        position: relative;
+        min-height: 230px;
+        margin: 22px 0;
+        border-radius: 18px;
+        background: linear-gradient(90deg, #eef7f5, #fff3d9);
+        overflow: hidden;
+        border: 1px solid var(--line);
+      }
+      .egg {
+        position: absolute;
+        right: 7%;
+        top: 70px;
+        width: 82px;
+        height: 82px;
+        border: 12px solid var(--gold);
+        border-radius: 50%;
+        background: #fffaf0;
+      }
+      .sperm {
+        position: absolute;
+        left: 5%;
+        font: 800 16px Arial;
+        color: white;
+        border-radius: 999px;
+        padding: 8px 13px;
+        background: var(--teal);
+        animation: swim 6s ease-in-out infinite;
+      }
+      .s1 {
+        top: 55px;
+        animation-delay: -1.2s;
+      }
+      .s2 {
+        top: 112px;
+        background: var(--purple);
+        animation-delay: -3.4s;
+      }
+      .race-label {
+        position: absolute;
+        left: 18px;
+        bottom: 14px;
+        right: 18px;
+        background: #ffffffea;
+        padding: 10px;
+        border-radius: 10px;
+        font: 15px/1.35 Arial;
+      }
+      .ratio {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+      .ratio .mini {
+        border-top: 5px solid var(--coral);
+      }
+      @keyframes swim {
+        0% {
+          left: 5%;
+          transform: translateY(0);
+        }
+        45% {
+          left: 72%;
+          transform: translateY(8px);
+        }
+        55% {
+          left: 72%;
+          transform: translateY(-7px);
+        }
+        100% {
+          left: 5%;
+          transform: translateY(0);
+        }
+      }
+      @media (max-width: 760px) {
+        .ratio {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .sperm {
+          animation: none;
+          left: 45%;
+        }
+      }
+      .content-note {
+        background: #f8e9e5;
+        border-left: 6px solid var(--coral);
+        border-radius: 14px;
+        padding: 18px;
+        margin: 20px 0;
+      }
+      .case-timeline {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
+        margin: 22px 0;
+      }
+      .case-timeline div {
+        background: var(--soft);
+        border-top: 5px solid var(--gold);
+        border-radius: 13px;
+        padding: 15px;
+      }
+      .case-timeline strong {
+        display: block;
+        color: var(--navy);
+        font: 800 16px Arial;
+        margin-bottom: 7px;
+      }
+      .video-wrap {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%;
+        overflow: hidden;
+        border-radius: 18px;
+        background: #17384a;
+        margin: 22px 0;
+      }
+      .video-wrap iframe {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+      .ethics-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+        align-items: start;
+      }
+      .ethics-grid figure {
+        margin: 0;
+      }
+      .claim-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
+      .claim-table th,
+      .claim-table td {
+        padding: 13px;
+        border: 1px solid var(--line);
+        vertical-align: top;
+      }
+      .claim-table th {
+        background: var(--navy);
+        color: white;
+        text-align: left;
+        font-family: Arial;
+      }
+      .claim-table tr:nth-child(even) {
+        background: var(--soft);
+      }
+      @media (max-width: 900px) {
+        .case-timeline {
+          grid-template-columns: 1fr 1fr;
+        }
+        .ethics-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 540px) {
+        .case-timeline {
+          grid-template-columns: 1fr;
+        }
+      }
+      .chapter-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+        margin: 20px 0;
+      }
+      .chapter-nav a {
+        background: var(--soft);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 8px 12px;
+        text-decoration: none;
+        font: 700 14px Arial;
+      }
+      .three-agents {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+      }
+      .agent {
+        border-radius: 16px;
+        padding: 20px;
+        background: var(--soft);
+        border-top: 6px solid var(--teal);
+      }
+      .agent h3 {
+        margin-top: 0;
+      }
+      .spectrum {
+        background: linear-gradient(90deg, #f2edf7, #eef7f5, #fff3d9);
+        border-radius: 18px;
+        padding: 22px;
+        margin: 20px 0;
+      }
+      .spectrum-line {
+        height: 12px;
+        border-radius: 999px;
+        background: linear-gradient(
+          90deg,
+          var(--purple),
+          var(--teal),
+          var(--gold)
+        );
+        margin: 18px 0;
+      }
+      .dual-spectrum {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+        margin: 22px 0;
+      }
+      .spectrum-control {
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 20px;
+      }
+      .spectrum-control input[type="range"] {
+        width: 100%;
+        accent-color: var(--purple);
+        cursor: grab;
+        margin: 18px 0 8px;
+      }
+      .spectrum-control input[type="range"]:active {
+        cursor: grabbing;
+      }
+      .axis-labels {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 8px;
+        font: 700 13px/1.25 Arial;
+        color: var(--navy);
+      }
+      .axis-labels span:nth-child(2) {
+        text-align: center;
+      }
+      .axis-labels span:last-child {
+        text-align: right;
+      }
+      .spectrum-result {
+        min-height: 92px;
+        margin-top: 16px;
+        padding: 14px;
+        border-left: 5px solid var(--gold);
+        border-radius: 10px;
+        background: var(--soft);
+      }
+      .interactive-panel {
+        background: #f7faf9;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 22px;
+        margin: 22px 0;
+      }
+      .choice-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+      .choice-grid button,
+      .lens-buttons button {
+        border: 2px solid var(--teal);
+        background: white;
+        color: var(--navy);
+        border-radius: 12px;
+        padding: 13px;
+        cursor: pointer;
+        font: 700 15px Arial;
+      }
+      .choice-grid button:hover,
+      .choice-grid button:focus-visible,
+      .lens-buttons button:hover,
+      .lens-buttons button:focus-visible {
+        background: var(--soft);
+      }
+      .choice-grid button.correct {
+        background: #dff3e8;
+        border-color: #2d7653;
+      }
+      .choice-grid button.incorrect {
+        background: #fae6e1;
+        border-color: #a94d39;
+      }
+      .quiz-feedback {
+        min-height: 46px;
+        margin-top: 12px;
+        padding: 10px;
+        border-radius: 10px;
+        background: white;
+      }
+      .care-calc {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+      }
+      .care-calc label {
+        font: 700 15px Arial;
+        color: var(--navy);
+      }
+      .care-calc input {
+        width: 100%;
+        padding: 12px;
+        margin-top: 6px;
+        border: 2px solid var(--line);
+        border-radius: 10px;
+        font-size: 18px;
+      }
+      .calc-result {
+        grid-column: 1/-1;
+        background: var(--navy);
+        color: white;
+        border-radius: 14px;
+        padding: 18px;
+        font: 17px/1.5 Arial;
+      }
+      .lens-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+      }
+      .lens-buttons button[aria-pressed="true"] {
+        background: var(--teal);
+        color: white;
+      }
+      .lens-result {
+        margin-top: 14px;
+        background: white;
+        border-left: 5px solid var(--gold);
+        padding: 18px;
+        border-radius: 10px;
+        min-height: 110px;
+      }
+      .review-score {
+        background: var(--navy);
+        color: white;
+        border-radius: 14px;
+        padding: 16px;
+        margin-top: 18px;
+        font: 700 17px Arial;
+      }
+      .institution-flow {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        align-items: stretch;
+        margin: 18px 0;
+      }
+      .institution-flow div {
+        background: var(--soft);
+        padding: 15px;
+        border-radius: 12px;
+        text-align: center;
+        font: 700 15px/1.35 Arial;
+      }
+      .institution-flow div:not(:last-child)::after {
+        content: "→";
+        float: right;
+        margin-right: -20px;
+        color: var(--coral);
+        font-size: 25px;
+      }
+      @media (max-width: 800px) {
+        .dual-spectrum,
+        .three-agents,
+        .institution-flow {
+          grid-template-columns: 1fr 1fr;
+        }
+        .choice-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 540px) {
+        .dual-spectrum,
+        .three-agents,
+        .institution-flow,
+        .care-calc {
+          grid-template-columns: 1fr;
+        }
+        .institution-flow div:not(:last-child)::after {
+          content: "↓";
+          float: none;
+          display: block;
+          margin: 8px 0 -23px;
+        }
+        .calc-result {
+          grid-column: auto;
+        }
+      }
+      .book-layout{max-width:1320px;margin:28px auto 80px;display:grid;grid-template-columns:270px minmax(0,1fr);gap:28px;padding:0 18px}.section-legend{position:sticky;top:82px;align-self:start;max-height:calc(100vh - 104px);overflow:auto;background:#17384a;color:#fff;border-radius:20px;padding:22px;box-shadow:0 8px 28px rgba(23,56,74,.14)}.section-legend h2{margin:0 0 12px;color:#f6cc73;font:800 14px/1.2 Arial,sans-serif;text-transform:uppercase;letter-spacing:.12em}.section-legend a{display:block;color:#fff;text-decoration:none;padding:9px 11px;margin:3px 0;border-radius:9px;font:700 14px/1.28 Arial,sans-serif}.section-legend a:hover,.section-legend a:focus-visible{background:#ffffff1f}.section-legend .active{background:#16747b}.book-layout .wrap{margin:0;padding:0;min-width:0}@media(max-width:920px){.book-layout{grid-template-columns:1fr}.section-legend{position:static;max-height:none}.section-legend a{display:inline-block;margin:3px 1px}.book-layout .wrap{max-width:none}}
+    </style>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to main content</a>
+    <header class="top">
+      <a href="index.html">← Book home</a
+      ><a href="section2.html">← Section Two</a>
+    </header>
+    <section class="hero">
+      <div class="tag">Section Three • Complete chapter</div>
+      <h1>Socialization and Gender</h1>
+      <p>
+        Begin by separating biological sex characteristics from gender as a
+        social identity and institution—then examine how families, language,
+        law, religion, medicine, and power give those differences social
+        meaning.
+      </p>
+    </section>
+    <div class="book-layout">
+      <aside class="section-legend" aria-label="Section Three navigation">
+        <h2>In this section</h2>
+        <a href="section2.html">← Section Two</a>
+        <a class="active" href="#sex-gender">3.1 Sex, Gender &amp; Identity</a>
+        <a href="#variations">Chromosome Variations</a>
+        <a href="#david-reimer">David Reimer Case</a>
+        <a href="#cycle-tracking">Cycle-Tracking Claims</a>
+        <a href="#henry">Henry VIII Example</a>
+        <a href="#learning-gender">3.2 Learning Gender</a>
+        <a href="#roles-ideology">3.3 Roles &amp; Ideology</a>
+        <a href="#inequality-power">3.4 Inequality &amp; Power</a>
+        <a href="#global-gender">3.5 Global Gender Issues</a>
+        <a href="#concept-review">3.6 Concept Review</a>
+        <a href="#terms">Key Terms</a>
+        <a href="family-book-project.html#section3">📖 Family Book Project Slide</a>
+        <a href="#references">References</a>
+        <a href="section4.html">Continue to Section Four →</a>
+        <a href="index.html">Book Contents</a>
+      </aside>
+    <main class="wrap" id="main">
+      <section class="card">
+        <div class="tag">Learning objectives</div>
+        <h2>What you will be able to do</h2>
+        <div class="grid">
+          <div class="mini">
+            <strong>Distinguish</strong> chromosomal patterns, other sex
+            characteristics, gender identity, gender expression, and gender
+            roles.
+          </div>
+          <div class="mini">
+            <strong>Explain</strong> the typical contribution of egg and sperm
+            chromosomes at fertilization without treating biology as perfectly
+            binary.
+          </div>
+          <div class="mini">
+            <strong>Evaluate</strong> the “fast Y/slow X sperm” timing claim
+            using scientific evidence.
+          </div>
+          <div class="mini">
+            <strong>Analyze</strong> how patriarchal inheritance systems
+            historically directed reproductive blame toward women.
+          </div>
+          <div class="mini">
+            <strong>Compare</strong> the family, school, and media as
+            institutions that teach, reinforce, and sometimes challenge gender
+            roles.
+          </div>
+          <div class="mini">
+            <strong>Apply</strong> gender socialization, stereotypes, ideology,
+            doing gender, intersectionality, and the gendered division of labor
+            to real situations.
+          </div>
+          <div class="mini">
+            <strong>Evaluate</strong> how care work, organizations, law, and
+            economic resources distribute power and opportunity.
+          </div>
+          <div class="mini">
+            <strong>Interpret</strong> global gender patterns without assuming
+            that any society is uniform, static, or naturally unequal.
+          </div>
+        </div>
+        <nav class="chapter-nav" aria-label="Chapter Three sections">
+          <a href="#sex-gender">3.1 Sex and gender</a
+          ><a href="#learning-gender">3.2 Learning gender</a
+          ><a href="#roles-ideology">3.3 Roles and ideology</a
+          ><a href="#inequality-power">3.4 Inequality and power</a
+          ><a href="#global-gender">3.5 Global issues</a
+          ><a href="#concept-review">3.6 Review</a>
+        </nav>
+      </section>
+
+      <section class="card" id="sex-gender">
+        <div class="tag">3.1 Sex, gender, and identity</div>
+        <h2>What is determined at conception—and what is not?</h2>
+        <p class="lead">
+          In the typical XX/XY pathway, the egg contributes an X chromosome and
+          the fertilizing sperm contributes either X or Y. The sperm’s
+          chromosome therefore establishes the embryo’s usual XX or XY
+          chromosomal pattern. This concerns <strong>chromosomal sex</strong>,
+          not a person’s future gender identity, personality, social role, or
+          worth.
+        </p>
+        <div
+          class="chromosome-model"
+          role="img"
+          aria-label="Typical XX and XY chromosome contribution model"
+        >
+          <div class="gamete">
+            Egg<span>X</span>Egg cells typically contribute X.
+          </div>
+          <div class="operator" aria-hidden="true">+</div>
+          <div class="gamete">
+            Sperm<span>X or Y</span>Sperm typically contribute X or Y.
+          </div>
+          <div class="operator" aria-hidden="true">→</div>
+          <div class="outcome">
+            <strong>X egg + X sperm → XX</strong><br /><br /><strong
+              >X egg + Y sperm → XY</strong
+            ><br /><br />Each conception is a new probability; previous children
+            do not control the next outcome.
+          </div>
+        </div>
+        <div class="caution">
+          <strong>Important variation:</strong> Not everyone has a typical XX or
+          XY pattern, and chromosomes do not always predict anatomy in a simple
+          way. Variations can include XXY, XO, mosaic patterns, androgen
+          insensitivity, congenital adrenal hyperplasia, and other differences
+          of sex development. “Typically” is therefore more accurate than
+          “always.”
+        </div>
+        <h3>Sex and gender are related, but they are not synonyms</h3>
+        <div class="grid">
+          <div class="mini">
+            <strong>Sex characteristics</strong><br />Chromosomes, genes,
+            hormones, gonads, reproductive anatomy, and secondary physical
+            traits.
+          </div>
+          <div class="mini">
+            <strong>Gender identity</strong><br />A person’s internal
+            understanding of their gender. It cannot be read directly from a
+            chromosome image.
+          </div>
+          <div class="mini">
+            <strong>Gender expression</strong><br />How people communicate
+            gender through appearance, language, behavior, and other social
+            signs.
+          </div>
+          <div class="mini">
+            <strong>Gender roles and ideology</strong><br />Social expectations
+            about how people categorized as women, men, girls, boys, or other
+            genders should behave and what power they should hold.
+          </div>
+        </div>
+      </section>
+
+      <section class="card" id="variations">
+        <div class="tag">Chromosome chart</div>
+        <h2>Beyond XX and XY: variation in the 23rd pair</h2>
+        <p class="lead">
+          Most human body cells contain
+          <strong>46 chromosomes arranged in 23 pairs</strong>—not 23
+          chromosomes total. A trisomy means three copies of a chromosome; a
+          monosomy means one copy instead of the usual pair.
+        </p>
+        <figure class="figure">
+          <img
+            src="assets/sex-chromosome-variations.svg"
+            alt="Chart of 23 chromosome pairs highlighting pair 23, with examples of 46 XX, 46 XY, 47 XXY, 47 XXX, 47 XYY, and 45 X. It notes that chromosomes cannot reveal identity, personality, worth, exact anatomy, or the future."
+          />
+          <figcaption>
+            The first number is the total chromosome count; the letters name the
+            sex chromosomes. These patterns describe chromosomes—not every
+            aspect of a person.
+          </figcaption>
+        </figure>
+        <div class="grid">
+          <div class="mini">
+            <strong>47,XXY — Klinefelter syndrome</strong><br />An extra X
+            chromosome affects male development. Features vary and can be mild.
+            XXY alone does not mean a person has “both male and female parts.”
+          </div>
+          <div class="mini">
+            <strong>47,XXX — trisomy X</strong><br />Girls and women have an
+            additional X chromosome. Some have no apparent features; others
+            experience developmental, learning, or health differences.
+          </div>
+          <div class="mini">
+            <strong>47,XYY — XYY syndrome</strong><br />An additional Y
+            chromosome affects males. Many have few unusual physical features,
+            while development and learning can vary.
+          </div>
+          <div class="mini">
+            <strong>45,X — Turner syndrome</strong><br />One X chromosome is
+            missing or altered in cells. Turner syndrome affects female
+            development and is a monosomy, not a trisomy.
+          </div>
+        </div>
+        <div class="caution">
+          <strong>Chromosomes are not destiny.</strong> Sex development also
+          involves genes, hormones, receptors, gonads, anatomy, and development
+          over time. “Intersex” or “differences of sex development” includes
+          many distinct variations; it is not another name for XXY alone.
+        </div>
+        <h3>Anne Fausto-Sterling and the “five sexes” argument</h3>
+        <p>
+          Biologist and gender-studies scholar Anne Fausto-Sterling’s 1993 essay
+          used a deliberately provocative five-category model to challenge the
+          idea that every body fits neatly into two biological boxes. Its
+          sociological value lies in asking who creates categories, whose bodies
+          become the standard, and what institutions do when bodies do not fit.
+        </p>
+        <p>
+          The model is not a current clinical classification. Some historical
+          labels in the essay are now dated and stigmatizing, so this coursebook
+          does not use them to name people. Current teaching should identify a
+          specific variation when relevant, use person-centered language, and
+          distinguish biological diversity from gender identity and society’s
+          rules for classifying bodies.
+        </p>
+        <h3>Interactive: what can a karyotype tell us?</h3>
+        <div class="activity">
+          <button type="button" aria-expanded="false">
+            Can it show chromosome number and arrangement?
+          </button>
+          <div class="feedback">
+            <strong>Yes.</strong> It can reveal patterns such as 46,XX; 46,XY;
+            47,XXY; 47,XXX; 47,XYY; or 45,X in the cells examined.
+          </div>
+          <button type="button" aria-expanded="false">
+            Can it tell us a person’s gender identity or personality?
+          </button>
+          <div class="feedback">
+            <strong>No.</strong> Identity, interests, personality, and social
+            roles cannot be read from a chromosome image.
+          </div>
+          <button type="button" aria-expanded="false">
+            Can it describe every hormone, receptor, gene, or anatomical trait?
+          </button>
+          <div class="feedback">
+            <strong>No.</strong> A karyotype is one source of biological
+            information. Multiple systems interact, and mosaicism can mean
+            different cells have different patterns.
+          </div>
+          <button type="button" aria-expanded="false">
+            Can it predict exact abilities or the future?
+          </button>
+          <div class="feedback">
+            <strong>No.</strong> Individuals vary widely. Biology,
+            relationships, resources, discrimination, healthcare, education, and
+            other environments all matter.
+          </div>
+        </div>
+      </section>
+
+      <section class="card" id="david-reimer">
+        <div class="tag">Case study • socialization, identity, and ethics</div>
+        <h2>David Reimer and the “John/Joan” case</h2>
+        <div class="content-note">
+          <strong>Content note:</strong> This case involves childhood medical
+          injury, nonconsensual treatment, coercive clinical practices,
+          psychological trauma, and suicide. The account avoids graphic detail
+          and centers David Reimer’s humanity rather than treating him as an
+          experiment.
+        </div>
+        <p class="lead">
+          The case is historically important because it challenged a strong
+          version of the claim that gender identity could be produced almost
+          entirely through socialization. It is equally important as a warning
+          about medical authority, secrecy, irreversible interventions, and
+          research conducted without meaningful consent or respect for the
+          child.
+        </p>
+        <figure class="figure">
+          <img
+            src="assets/david-reimer-life-course.png"
+            alt="Original five-panel symbolic illustration showing infant twins in Canada, adults making a medical decision, a child experiencing an assigned role as mismatched, an adolescent reclaiming agency, and an adult advocating for medical ethics."
+          />
+          <figcaption>
+            Original symbolic teaching illustration. It does not portray David
+            Reimer’s actual appearance and should not be interpreted as a
+            documentary image.
+          </figcaption>
+        </figure>
+        <h3>What happened?</h3>
+        <div class="case-timeline">
+          <div>
+            <strong>1965–1966</strong>David Reimer was born in Winnipeg as one
+            of identical twin boys. At approximately eight months, his penis was
+            severely injured during a circumcision procedure.
+          </div>
+          <div>
+            <strong>Medical recommendation</strong>Psychologist John Money
+            advised the family to reassign and raise David as a girl. His
+            parents followed expert advice during a period when clinicians often
+            believed early rearing could determine gender identity.
+          </div>
+          <div>
+            <strong>Childhood</strong>David was given a female name and social
+            role and received medical treatment intended to support the
+            reassignment. He resisted the assigned identity and experienced
+            significant distress. Clinical sessions later described by David and
+            his twin also raise serious concerns about coercion and abuse.
+          </div>
+          <div>
+            <strong>Adolescence</strong>At about age 14, his parents told him
+            the history of the injury and reassignment. He chose the name David,
+            lived as male, and later received medical care aligned with that
+            identity.
+          </div>
+          <div>
+            <strong>Public record and legacy</strong>Milton Diamond and H. Keith
+            Sigmundson published a long-term follow-up in 1997 that contradicted
+            earlier reports of success. David later chose to tell his story
+            publicly so clinicians would reconsider similar treatment.
+          </div>
+        </div>
+        <h3>Why was it called the “John/Joan” case?</h3>
+        <p>
+          Early professional reports protected the subject’s identity by using
+          pseudonyms such as “John/Joan.” Those reports portrayed the
+          reassignment as successful and were widely cited in arguments that
+          gender identity was highly malleable in early childhood. David’s later
+          testimony and the 1997 follow-up showed that this account omitted or
+          misinterpreted crucial evidence of resistance and distress.
+        </p>
+        <div class="ethics-grid">
+          <div>
+            <h3>What the case can support</h3>
+            <ul>
+              <li>
+                Gender identity cannot safely be assumed to be infinitely
+                malleable through parenting and social reinforcement.
+              </li>
+              <li>
+                Children are people with developing agency, not blank slates or
+                research materials.
+              </li>
+              <li>
+                Patients and families need truthful information, meaningful
+                consent, age-appropriate assent, independent support, and
+                long-term follow-up.
+              </li>
+              <li>
+                Irreversible interventions demand particular caution when they
+                are not medically urgent and the person cannot participate in
+                the decision.
+              </li>
+              <li>
+                Researchers must report outcomes honestly, including evidence
+                that challenges their theory.
+              </li>
+            </ul>
+          </div>
+          <figure class="figure">
+            <img
+              src="assets/david-reimer-medical-ethics.png"
+              alt="Conceptual illustration of a child protected by supportive hands, surrounded by symbols for consent, listening, preserving future choices, and a medical team pausing before an irreversible decision."
+            />
+            <figcaption>
+              A child-centered ethical framework asks professionals to listen,
+              tell the truth, minimize harm, preserve future choices, and
+              acknowledge uncertainty.
+            </figcaption>
+          </figure>
+        </div>
+        <h3>What the case cannot prove by itself</h3>
+        <table class="claim-table">
+          <thead>
+            <tr>
+              <th scope="col">Overstated claim</th>
+              <th scope="col">More careful conclusion</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>“The case proves gender is entirely biological.”</td>
+              <td>
+                No single case can establish how biology, development,
+                relationships, culture, and self-understanding interact for
+                everyone.
+              </td>
+            </tr>
+            <tr>
+              <td>“Socialization does not matter.”</td>
+              <td>
+                Socialization strongly shapes gender roles, expression,
+                opportunity, language, and treatment. The case challenges the
+                idea that socialization can simply manufacture any identity
+                professionals choose.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                “David’s experience is the same as being transgender or
+                intersex.”
+              </td>
+              <td>
+                No. David was born with a typical XY pattern and was reassigned
+                following an injury. His circumstances should not be used to
+                invalidate transgender identities or to collapse all differences
+                of sex development into one story.
+              </td>
+            </tr>
+            <tr>
+              <td>“His suicide had one proven cause.”</td>
+              <td>
+                David died by suicide in 2004 after multiple documented
+                stresses. It is inappropriate to reduce suicide to a single
+                cause or use his death as proof of one theory.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Watch and reflect</h3>
+        <div class="video-wrap">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/nj5-6EkvAMc"
+            title="Video about the David Reimer John Joan case"
+            allow="
+              accelerometer;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+              web-share;
+            "
+            referrerpolicy="strict-origin-when-cross-origin"
+            loading="lazy"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="activity">
+          <button type="button" aria-expanded="false">
+            Which social institutions shaped David’s experience?
+          </button>
+          <div class="feedback">
+            Family, medicine, research, education, media, and gender norms all
+            played roles. His parents’ choices also occurred within a major
+            power imbalance: they relied on respected experts who controlled
+            specialized knowledge.
+          </div>
+          <button type="button" aria-expanded="false">
+            Where did power operate in this case?
+          </button>
+          <div class="feedback">
+            Professional authority influenced the family’s decisions, the
+            information they received, David’s treatment, and the published
+            scientific account. David had the least institutional power even
+            though the decisions affected his body and life.
+          </div>
+          <button type="button" aria-expanded="false">
+            How would a child-centered approach differ?
+          </button>
+          <div class="feedback">
+            It would provide honest developmentally appropriate information,
+            listen to persistent distress, seek assent when possible, avoid
+            unnecessary irreversible procedures, offer independent counseling,
+            preserve future options, and revise the plan as the child’s own
+            identity becomes clearer.
+          </div>
+        </div>
+      </section>
+
+      <section class="card" id="cycle-tracking">
+        <div class="tag">Animated evidence check</div>
+        <h2>Cycle tracking and attempted sex selection</h2>
+        <p>
+          Some people track cervical mucus, basal body temperature, or ovulation
+          tests to estimate the fertile window. That can help identify when
+          conception is more likely. Popular timing methods go further and claim
+          that intercourse earlier or later in the window can favor X-bearing or
+          Y-bearing sperm.
+        </p>
+        <div
+          class="race-demo"
+          role="img"
+          aria-label="X-bearing and Y-bearing sperm moving toward an egg together. The animation illustrates a popular theory, not a proven difference in speed or survival."
+        >
+          <div class="sperm s1">X-bearing sperm</div>
+          <div class="sperm s2">Y-bearing sperm</div>
+          <div class="egg" aria-hidden="true"></div>
+          <div class="race-label">
+            <strong>Popular theory versus evidence:</strong> both move together
+            because the “slow, durable X versus fast, fragile Y” race is not
+            established science. Egg position does not reliably select one
+            chromosome.
+          </div>
+        </div>
+        <div class="caution">
+          <strong>What students should remember:</strong> cycle tracking may
+          help estimate ovulation and the chance of pregnancy. It has not been
+          shown to reliably determine whether an X-bearing or Y-bearing sperm
+          fertilizes the egg. These are chromosome-bearing sperm—not “female
+          sperm” and “male sperm”—and chromosomal sex is not a child’s future
+          gender.
+        </div>
+        <h3>From private preference to a population pattern</h3>
+        <p>
+          When a society gives sons greater inheritance, economic, ritual, or
+          old-age-support value, individual preferences can combine with
+          prenatal sex determination, discriminatory practices, or restrictive
+          population policies. The result can be a sex ratio at birth far above
+          the biological norm. The sociological cause is not “too many boys”; it
+          is the unequal valuation and treatment of girls and women.
+        </p>
+        <div class="ratio">
+          <div class="mini">
+            <strong>How imbalance develops</strong><br />Son preference + access
+            to sex selection + economic or policy pressure can turn family-level
+            decisions into a population-level skew.
+          </div>
+          <div class="mini">
+            <strong>Possible social consequences</strong><br />Large cohorts of
+            men facing a shortage of potential female partners can coincide with
+            marriage-market pressure, trafficking, forced marriage,
+            exploitation, and intensified control of women. These are
+            institutional risks—not automatic behavior by individual men.
+          </div>
+        </div>
+        <p>
+          A “balanced” society does not require governments or families to
+          engineer births. A rights-based response removes discrimination: value
+          children equally, strengthen women’s education and economic security,
+          reform unequal inheritance and care systems, and protect reproductive
+          autonomy.
+        </p>
+        <div class="activity">
+          <button type="button" aria-expanded="false">
+            Does tracking ovulation help someone become pregnant?
+          </button>
+          <div class="feedback">
+            <strong>It can.</strong> Tracking can help estimate the fertile
+            window, although bodies and cycles vary.
+          </div>
+          <button type="button" aria-expanded="false">
+            Does an earlier egg position let slower X-bearing sperm win?
+          </button>
+          <div class="feedback">
+            <strong>No reliable evidence supports that explanation.</strong> Egg
+            position is not a dependable sex-selection mechanism, and research
+            has not shown intercourse timing to influence a baby’s sex in
+            practice.
+          </div>
+          <button type="button" aria-expanded="false">
+            Why can son preference become a social problem?
+          </button>
+          <div class="feedback">
+            Because gender inequality can shape repeated decisions across
+            millions of families. Institutions, technology, law, inheritance,
+            and economic insecurity can transform a private preference into
+            discrimination and demographic imbalance.
+          </div>
+        </div>
+      </section>
+
+      <section class="card" id="timing">
+        <div class="tag">Evidence check</div>
+        <h2>The “fast Y sperm and slow X sperm” claim</h2>
+        <p>
+          The terms <strong>endosperm</strong> and
+          <strong>gynosperm</strong> are not accepted names for human X- and
+          Y-bearing sperm. Endosperm is plant tissue that nourishes a developing
+          seed. In humans, the relevant terms are
+          <strong>X-bearing sperm</strong> and <strong>Y-bearing sperm</strong>.
+        </p>
+        <p>
+          The popular Shettles method claimed that Y-bearing sperm were faster
+          but more fragile while X-bearing sperm were slower and longer-lived.
+          It therefore proposed timing intercourse near ovulation for a boy and
+          earlier for a girl. Well-designed research has not shown that
+          intercourse timing relative to ovulation has a practical influence on
+          a baby’s sex. Timing can affect the probability of
+          <em>conception</em> because pregnancy is more likely during the
+          fertile window; it should not be presented as a reliable way to select
+          XX or XY.
+        </p>
+        <div class="activity">
+          <button type="button" aria-expanded="false">
+            “A Y-bearing sperm always creates a male child.”
+          </button>
+          <div class="feedback">
+            <strong>Too absolute.</strong> A Y chromosome usually initiates a
+            pathway associated with testes development, but genes, hormones,
+            receptors, anatomy, and developmental variation mean chromosomes
+            alone do not describe every person’s sex characteristics—and they do
+            not determine gender identity.
+          </div>
+          <button type="button" aria-expanded="false">
+            “The person producing sperm contributes the X or Y that usually
+            establishes the embryo’s XX or XY pattern.”
+          </button>
+          <div class="feedback">
+            <strong>Accurate for the typical pathway.</strong> The egg
+            contributes X; the sperm contributes X or Y. “Contributes” is better
+            than “fault,” because an individual does not consciously select
+            which sperm fertilizes an egg.
+          </div>
+          <button type="button" aria-expanded="false">
+            “Intercourse close to ovulation reliably increases the chance of a
+            boy.”
+          </button>
+          <div class="feedback">
+            <strong>Not supported.</strong> Timing intercourse can affect
+            whether conception occurs, but research does not support using
+            timing as a dependable method of selecting a child’s chromosomal
+            sex.
+          </div>
+          <button type="button" aria-expanded="false">
+            “Sex chromosomes determine gender roles.”
+          </button>
+          <div class="feedback">
+            <strong>False.</strong> Gender roles are learned and enforced
+            through socialization, institutions, culture, rewards, sanctions,
+            and power. Biology does not dictate that one gender must rule,
+            inherit, earn, care, or obey.
+          </div>
+        </div>
+      </section>
+
+      <section class="card" id="henry">
+        <div class="tag">Historical case study</div>
+        <h2>Henry VIII, his wives, and the politics of producing a son</h2>
+        <figure class="figure">
+          <img
+            src="assets/henry-viii-six-wives.png"
+            alt="Original painterly educational illustration of Henry VIII standing in the center of a Tudor palace with exactly six wives arranged around him in period clothing."
+          />
+          <figcaption>
+            Original teaching illustration of Henry VIII with Catherine of
+            Aragon, Anne Boleyn, Jane Seymour, Anne of Cleves, Catherine Howard,
+            and Catherine Parr. It is an interpretive classroom image, not a
+            historical group portrait; the seven figures never posed together.
+          </figcaption>
+        </figure>
+        <p class="lead">
+          Henry VIII’s succession crisis demonstrates how limited biological
+          knowledge can combine with patriarchy, monarchy, religion, and
+          inheritance rules to assign blame.
+        </p>
+        <p>
+          Henry wanted a surviving legitimate son to secure the Tudor
+          succession. Catherine of Aragon and Anne Boleyn experienced
+          pregnancies that did not produce the surviving male heir Henry
+          demanded, and both women were subjected to political and personal
+          blame. Jane Seymour gave birth to Edward VI in 1537 and died shortly
+          afterward. Modern genetics reveals the irony: in the typical XX/XY
+          pathway, the fertilizing sperm—not the egg—contributes the chromosome
+          that establishes XX or XY.
+        </p>
+        <div class="history">
+          <strong
+            >But “the father was at fault” still uses the wrong sociological
+            frame.</strong
+          >
+          Neither parent controls which individual sperm fertilizes an egg, and
+          pregnancy loss, infertility, and fetal development can involve many
+          factors. The deeper problem was a social system that treated women’s
+          value as dependent on producing a male heir while concentrating
+          dynastic authority and inheritance in men.
+        </div>
+        <h3>Apply the sociological imagination</h3>
+        <div class="grid">
+          <div class="mini">
+            <strong>Culture</strong><br />A male heir was associated with
+            political continuity and military stability.
+          </div>
+          <div class="mini">
+            <strong>Institution</strong><br />Monarchy, inheritance law,
+            marriage, and church authority turned reproduction into a matter of
+            state.
+          </div>
+          <div class="mini">
+            <strong>Gender ideology</strong><br />Women were expected to produce
+            heirs yet lacked control over chromosomes, succession rules, or many
+            decisions about their marriages.
+          </div>
+          <div class="mini">
+            <strong>Power</strong><br />Henry could seek annulments, imprison
+            opponents, and punish wives; the women did not possess equivalent
+            power to redefine the situation.
+          </div>
+        </div>
+        <h3>Interactive: move from individual blame to social analysis</h3>
+        <div class="activity">
+          <button type="button" aria-expanded="false">
+            Why were Henry’s wives blamed?
+          </button>
+          <div class="feedback">
+            Because patriarchal gender ideology treated reproduction as a wife’s
+            duty, medical knowledge was limited, and political institutions made
+            the birth of a son unusually consequential.
+          </div>
+          <button type="button" aria-expanded="false">
+            What does chromosome science correct?
+          </button>
+          <div class="feedback">
+            In the typical XX/XY pathway, the egg provides X while the sperm
+            provides X or Y. A wife does not biologically determine whether the
+            embryo receives an X or Y sperm.
+          </div>
+          <button type="button" aria-expanded="false">
+            What does sociology add beyond the biological correction?
+          </button>
+          <div class="feedback">
+            Sociology asks why producing a male heir mattered so much, why women
+            carried the blame, how law and religion reinforced that blame, and
+            why one person possessed the power to impose severe consequences.
+          </div>
+        </div>
+      </section>
+
+      <section class="card" id="learning-gender">
+        <div class="tag">
+          3.2 Learning gender: socialization and development
+        </div>
+        <h2>How do people learn gender?</h2>
+        <p class="lead">
+          Gender socialization is the lifelong process through which people
+          learn the meanings, expectations, opportunities, and boundaries
+          attached to gender categories. Children are not empty containers: they
+          observe patterns, test rules, notice inconsistencies, and actively
+          build an understanding of themselves.
+        </p>
+        <figure class="figure">
+          <img
+            src="assets/gender-socialization-agents.png"
+            alt="A diverse child at the center actively interpreting messages from family life, peers, school, and media role models."
+          />
+          <figcaption>
+            Gender learning is interactive. Institutions send messages, but
+            children interpret, negotiate, resist, and combine them.
+          </figcaption>
+        </figure>
+        <h3>Three major institutional sources</h3>
+        <div class="three-agents">
+          <div class="agent">
+            <h3>1. Family: the first messages</h3>
+            <p>
+              Before children enter school or choose media, families communicate
+              gender through names, clothing, toys, room colors, chores,
+              affection, discipline, language, and the division of paid and
+              unpaid work they observe.
+            </p>
+            <p>
+              Repeated messages can embed bias—for example, comforting girls
+              while telling boys to suppress fear—or provide guidance that
+              emphasizes shared human abilities, respects differences, and
+              allows variation.
+            </p>
+          </div>
+          <div class="agent">
+            <h3>2. School: rules and opportunity</h3>
+            <p>
+              Schools teach through curricula, teacher expectations, dress
+              codes, sports, bathrooms, peer cultures, disciplinary practices,
+              and whose accomplishments appear in lessons. The
+              <strong>hidden curriculum</strong> includes lessons conveyed by
+              routines even when they are not formally taught.
+            </p>
+            <p>
+              Schools can reproduce inequality or interrupt it by presenting
+              varied role models, responding consistently to harassment, and
+              giving all students access to leadership, care, arts, technology,
+              and athletics.
+            </p>
+          </div>
+          <div class="agent">
+            <h3>3. Media: stories and visibility</h3>
+            <p>
+              Television, games, music, advertising, news, influencers, and
+              algorithms model which bodies, occupations, relationships, and
+              emotions appear normal or valuable. Repetition can make a social
+              arrangement look natural.
+            </p>
+            <p>
+              Media also expands possibilities. Seeing women as scientists,
+              nurturing men, LGBTQ+ families, and gender-diverse people can
+              challenge narrow scripts and supply language for experiences a
+              child already recognizes.
+            </p>
+          </div>
+        </div>
+        <div class="caution">
+          <strong>Peers matter too.</strong> Friends, siblings, teammates, and
+          online communities often reward conformity or sanction difference.
+          This chapter features family, school, and media as three central
+          institutions, but peer groups are powerful socializing agents that
+          connect all three.
+        </div>
+        <h3>Gender is not one switch</h3>
+        <div class="spectrum">
+          <p>
+            <strong
+              >Societies often package gender as two fixed opposites:</strong
+            >
+            masculine or feminine, strong or caring, leader or helper. Human
+            lives do not sort so neatly.
+          </p>
+          <div class="spectrum-line" aria-hidden="true"></div>
+          <p>
+            A spectrum is more accurate when it means
+            <strong>multidimensional variation</strong>. Identity, expression,
+            interests, roles, bodies, and relationships are separate
+            dimensions—not a single scale with “male” at one end and “female” at
+            the other. Some people experience gender as stable; others
+            experience it as fluid, mixed, neutral, or outside binary
+            categories. Respecting variation does not require denying average
+            differences or forcing anyone to change how they understand
+            themselves.
+          </p>
+        </div>
+        <h3>Four ways socialization operates</h3>
+        <div class="grid">
+          <div class="mini">
+            <strong>Modeling</strong><br />Children observe who cooks, earns,
+            repairs, comforts, leads, interrupts, or receives respect.
+          </div>
+          <div class="mini">
+            <strong>Reinforcement</strong><br />Praise, teasing, attention,
+            punishment, and exclusion make some behaviors easier and others
+            costly.
+          </div>
+          <div class="mini">
+            <strong>Channeling</strong><br />Adults and institutions offer
+            different toys, courses, sports, clothing, responsibilities, and
+            futures.
+          </div>
+          <div class="mini">
+            <strong>Language and classification</strong><br />Labels such as
+            “bossy,” “tomboy,” “ladylike,” or “man up” attach gendered meanings
+            to behavior.
+          </div>
+        </div>
+        <h3>Interactive: identify the socializing process</h3>
+        <div class="activity">
+          <button type="button" aria-expanded="false">
+            A father takes parental leave, cooks dinner, and comforts a
+            frightened child.
+          </button>
+          <div class="feedback">
+            <strong>Modeling and counter-socialization.</strong> The child sees
+            care as a human responsibility rather than women’s work.
+          </div>
+          <button type="button" aria-expanded="false">
+            A teacher calls on boys more often during robotics and girls more
+            often during reading.
+          </button>
+          <div class="feedback">
+            <strong>Channeling and differential expectations.</strong> Even
+            without stating a stereotype, attention can shape confidence,
+            practice, and future course choices.
+          </div>
+          <button type="button" aria-expanded="false">
+            A video platform repeatedly recommends beauty content to girls and
+            competitive gaming to boys.
+          </button>
+          <div class="feedback">
+            <strong>Algorithmic reinforcement.</strong> Prior clicks and
+            commercial categories can narrow what users see, making gendered
+            patterns appear to reflect preference alone.
+          </div>
+          <button type="button" aria-expanded="false">
+            A child rejects the toy aisle labeled for their gender.
+          </button>
+          <div class="feedback">
+            <strong>Agency and resistance.</strong> Socialization is powerful
+            but never total. People interpret and sometimes challenge the
+            messages they receive.
+          </div>
+        </div>
+      </section>
+
+      <section class="card" id="roles-ideology">
+        <div class="tag">3.3 Gender roles, stereotypes, and ideology</div>
+        <h2>From repeated expectations to “common sense”</h2>
+        <p class="lead">
+          A gender role is a social expectation; a stereotype is an
+          oversimplified belief about a category; and gender ideology is the
+          larger belief system used to explain or justify how responsibilities,
+          authority, and rewards should be divided.
+        </p>
+        <div
+          class="institution-flow"
+          aria-label="Process through which gender beliefs can become inequality"
+        >
+          <div>Repeated message</div>
+          <div>Stereotype appears natural</div>
+          <div>Institutions organize around it</div>
+          <div>Unequal outcome seems deserved</div>
+        </div>
+        <h3>Descriptive and prescriptive stereotypes</h3>
+        <p>
+          <strong>Descriptive stereotypes</strong> claim what women, men, or
+          gender-diverse people supposedly are like.
+          <strong>Prescriptive stereotypes</strong> state how they should
+          behave. A woman may be stereotyped as emotional; if she acts
+          assertively, she may then be sanctioned for violating the expectation
+          that she should be agreeable. Men can be punished for vulnerability or
+          care work because masculinity is often policed through other men’s
+          approval.
+        </p>
+        <div class="grid">
+          <div class="mini">
+            <strong>Hegemonic masculinity</strong><br />A culturally dominant
+            ideal that connects “real manhood” with authority, heterosexuality,
+            toughness, control, and economic success. Most men do not fully
+            embody it, yet it can still organize status among men.
+          </div>
+          <div class="mini">
+            <strong>Emphasized femininity</strong><br />An ideal that rewards
+            accommodation to men’s interests through appearance, nurturance,
+            deference, and heterosexual desirability. Femininities also vary by
+            class, race, age, sexuality, disability, and culture.
+          </div>
+          <div class="mini">
+            <strong>Doing gender</strong><br />People produce gender in everyday
+            interaction—through dress, speech, emotion, work, posture, and
+            accountability to others’ expectations. It is something people
+            accomplish, not merely something they possess.
+          </div>
+          <div class="mini">
+            <strong>Intersectionality</strong><br />Gender never acts alone.
+            Race, class, sexuality, citizenship, age, and disability combine to
+            shape which versions of femininity or masculinity are rewarded,
+            punished, or even available.
+          </div>
+        </div>
+        <h3>Interactive: two spectra—not one</h3>
+        <p>
+          Drag each control and watch the interpretation change. The first axis
+          describes the organization of
+          <strong>institutional authority</strong>; the second describes how a
+          culture <strong>codes traits and roles</strong>. They are related, but
+          they are not the same thing—and neither slider measures an individual
+          person’s worth, identity, or ability.
+        </p>
+        <div class="dual-spectrum">
+          <div class="spectrum-control">
+            <h4>1. Institutional authority</h4>
+            <label for="powerSpectrum">Move the authority marker</label>
+            <input
+              id="powerSpectrum"
+              type="range"
+              min="0"
+              max="100"
+              value="50"
+            />
+            <div class="axis-labels" aria-hidden="true">
+              <span>Patriarchal</span><span>Shared / egalitarian</span
+              ><span>Matrilineal / women-centered</span>
+            </div>
+            <div
+              class="spectrum-result"
+              id="powerResult"
+              aria-live="polite"
+            ></div>
+          </div>
+          <div class="spectrum-control">
+            <h4>2. Historical trait coding</h4>
+            <label for="traitSpectrum">Move the cultural-coding marker</label>
+            <input
+              id="traitSpectrum"
+              type="range"
+              min="0"
+              max="100"
+              value="50"
+            />
+            <div class="axis-labels" aria-hidden="true">
+              <span>Feminine-coded</span><span>Mixed / uncoded</span
+              ><span>Masculine-coded</span>
+            </div>
+            <div
+              class="spectrum-result"
+              id="traitResult"
+              aria-live="polite"
+            ></div>
+          </div>
+        </div>
+        <div class="caution">
+          <strong>Important distinction:</strong> Matrilineal means descent,
+          inheritance, or kinship is traced through the mother’s line;
+          matrifocal means family life centers strongly on women or mothers.
+          Neither automatically means that women dominate men. “Matriarchy” as a
+          direct mirror image of patriarchy is a debated label.
+        </div>
+        <h3>Historical case: Victorian “separate spheres”</h3>
+        <p>
+          A powerful nineteenth-century middle-class ideal associated men with
+          the public sphere—paid work, politics, rationality, and authority—and
+          women with the private sphere—home, morality, emotion, nurturance, and
+          deference. This was an ideology, not a description of every household:
+          many women worked for wages, and class, race, empire, and marital
+          status shaped who could approximate the ideal. Its importance lies in
+          how it made a particular division of labor appear natural.
+        </p>
+        <div class="reflection">
+          <strong>Reflect:</strong> If leadership, courage, technical skill,
+          caregiving, cooperation, and emotional intelligence are useful human
+          capacities, what is lost when a society assigns each capacity to only
+          one gender? How could families prepare every child to practice all of
+          them?
+        </div>
+        <h3>Interactive: decode the message</h3>
+        <div class="interactive-panel" data-quiz>
+          <p>
+            <strong>Scenario:</strong> Two equally qualified employees speak
+            firmly in meetings. One man is described as decisive; one woman is
+            described as difficult. Which concept best explains the different
+            evaluation?
+          </p>
+          <div class="choice-grid">
+            <button data-correct="false">Chromosomal variation</button
+            ><button data-correct="true">Gendered double standard</button
+            ><button data-correct="false">Role exit</button
+            ><button data-correct="false">Fertility timing</button>
+          </div>
+          <div class="quiz-feedback" aria-live="polite">Choose an answer.</div>
+        </div>
+        <div class="interactive-panel" data-quiz>
+          <p>
+            <strong>Scenario:</strong> A working-class father is praised for
+            being emotionally present but mocked by coworkers for reducing his
+            hours to provide care. Which explanation is strongest?
+          </p>
+          <div class="choice-grid">
+            <button data-correct="false">Gender has disappeared</button
+            ><button data-correct="false">Only personality matters</button
+            ><button data-correct="true">
+              Competing masculinity and provider norms</button
+            ><button data-correct="false">
+              Biology requires full-time work
+            </button>
+          </div>
+          <div class="quiz-feedback" aria-live="polite">Choose an answer.</div>
+        </div>
+        <div class="caution">
+          <strong
+            >A stereotype can contain a statistical observation and still
+            mislead.</strong
+          >
+          Group averages do not tell us what every individual can or should do.
+          Stereotypes become especially harmful when institutions use them to
+          allocate opportunities before evaluating the person.
+        </div>
+      </section>
+
+      <section class="card" id="inequality-power">
+        <div class="tag">3.4 Gender inequality, power, and stratification</div>
+        <h2>How small patterns accumulate into unequal lives</h2>
+        <figure class="figure">
+          <img
+            src="assets/gender-power-care-work.png"
+            alt="Split illustration contrasting one worker carrying paid work and invisible household responsibilities with a household that shares care, time, decisions, and opportunity."
+          />
+          <figcaption>
+            Gender inequality is not only an attitude. It is produced through
+            the organization of time, money, care, authority, and access.
+          </figcaption>
+        </figure>
+        <p class="lead">
+          Stratification means patterned inequality among social categories.
+          Gender stratification appears when gender affects income, wealth,
+          time, safety, political voice, education, occupational authority,
+          health, or freedom—even when no single person openly intends
+          discrimination.
+        </p>
+        <h3>The gendered division of labor</h3>
+        <p>
+          Paid employment and family labor are interdependent. Meals, cleaning,
+          emotional support, transportation, appointments, child development,
+          and elder care reproduce the labor force and sustain communities, yet
+          much of this work is unpaid or poorly paid. Globally, women and girls
+          perform substantially more unpaid care work than men. The result can
+          be a <strong>time penalty</strong>: fewer uninterrupted hours for
+          education, sleep, advancement, political participation, or leisure.
+        </p>
+        <div class="grid">
+          <div class="mini">
+            <strong>Second shift</strong><br />Household and care work performed
+            after paid employment.
+          </div>
+          <div class="mini">
+            <strong>Mental load</strong><br />Remembering, anticipating,
+            scheduling, noticing, and coordinating what a household needs.
+          </div>
+          <div class="mini">
+            <strong>Occupational segregation</strong><br />Women and men are
+            concentrated in different jobs, industries, and levels of authority.
+          </div>
+          <div class="mini">
+            <strong>Glass ceiling and glass escalator</strong><br />Invisible
+            barriers can slow women’s advancement, while men in some
+            women-dominated occupations may be moved toward authority.
+          </div>
+        </div>
+        <h3>Interactive: make invisible time visible</h3>
+        <div class="interactive-panel care-calc">
+          <label
+            >Person A: unpaid care hours per week<input
+              id="careA"
+              type="number"
+              min="0"
+              max="168"
+              value="28" /></label
+          ><label
+            >Person B: unpaid care hours per week<input
+              id="careB"
+              type="number"
+              min="0"
+              max="168"
+              value="14"
+          /></label>
+          <div class="calc-result" id="careResult" aria-live="polite">
+            Person A performs 14 more hours each week—about 728 hours across a
+            year.
+          </div>
+        </div>
+        <p>
+          The calculator does not decide what is fair. Families may divide labor
+          differently because of employment hours, disability, skill,
+          preference, culture, or life stage. The sociological questions are
+          whether the arrangement is visible, negotiated, revisable, and
+          connected to equal rest, decision-making, and future opportunity.
+        </p>
+        <h3>Power is more than who “wins” an argument</h3>
+        <div class="grid">
+          <div class="mini">
+            <strong>Resource power</strong><br />Control over income, property,
+            transportation, healthcare, technology, or legal status.
+          </div>
+          <div class="mini">
+            <strong>Agenda power</strong><br />Control over which problems are
+            discussed and which are dismissed as private or unimportant.
+          </div>
+          <div class="mini">
+            <strong>Definition power</strong><br />The ability to name behavior
+            normal, deviant, professional, emotional, safe, or dangerous.
+          </div>
+          <div class="mini">
+            <strong>Institutional power</strong><br />Rules and routines that
+            advantage some groups even without an openly prejudiced
+            decision-maker.
+          </div>
+        </div>
+        <h3>Families can interrupt inequality</h3>
+        <p>
+          Families prepare children for adult society not by teaching one rigid
+          script, but by teaching competence: every child can learn care,
+          communication, boundary-setting, financial literacy, household labor,
+          emotional regulation, technology, leadership, and respect. When
+          children see work shared and people redirected without humiliation,
+          they learn that equality is a daily practice rather than only an
+          abstract belief.
+        </p>
+      </section>
+
+      <section class="card" id="global-gender">
+        <div class="tag">3.5 Global gender issues</div>
+        <h2>Compare systems without ranking cultures</h2>
+        <figure class="figure">
+          <img
+            src="assets/global-gender-change.png"
+            alt="Global collage showing diverse people in education, caregiving, agriculture, technology, public leadership, migration, and community life connected by law, economy, culture, conflict, and technology."
+          />
+          <figcaption>
+            Every society contains multiple gender arrangements and ongoing
+            change. Global comparison should examine institutions, history,
+            resources, and power—not reduce a country to a stereotype.
+          </figcaption>
+        </figure>
+        <p class="lead">
+          Gender is global, but it is never identical everywhere. Marriage,
+          inheritance, work, care, education, dress, sexuality, and political
+          authority are shaped by local history as well as colonialism,
+          religion, markets, migration, conflict, social movements, law, and
+          technology.
+        </p>
+        <h3>A sociological global lens</h3>
+        <div
+          class="lens-buttons"
+          role="group"
+          aria-label="Choose a global gender lens"
+        >
+          <button type="button" aria-pressed="true" data-lens="education">
+            Education</button
+          ><button type="button" aria-pressed="false" data-lens="work">
+            Work</button
+          ><button type="button" aria-pressed="false" data-lens="care">
+            Care</button
+          ><button type="button" aria-pressed="false" data-lens="policy">
+            Law and policy
+          </button>
+        </div>
+        <div class="lens-result" id="lensResult" aria-live="polite">
+          <strong>Education:</strong> Gender gaps differ by level and place.
+          Poverty, conflict, caregiving, safety, school costs, disability
+          access, and local labor markets may disadvantage girls in one context
+          and boys in another. Enrollment alone does not reveal curriculum bias,
+          harassment, learning, completion, or opportunity after graduation.
+        </div>
+        <h3>Four safeguards against ethnocentrism</h3>
+        <div class="grid">
+          <div class="mini">
+            <strong>Look within societies</strong><br />Urban and rural regions,
+            classes, ethnic groups, generations, and families may differ
+            sharply.
+          </div>
+          <div class="mini">
+            <strong>Look historically</strong><br />Practices change. Today’s
+            arrangement is not an ancient or inevitable cultural essence.
+          </div>
+          <div class="mini">
+            <strong>Follow power and resources</strong><br />Ask who benefits,
+            who pays, what alternatives exist, and how law or markets constrain
+            choice.
+          </div>
+          <div class="mini">
+            <strong>Listen to local actors</strong><br />People inside a society
+            debate, resist, defend, and transform gender norms; they are not
+            passive examples.
+          </div>
+        </div>
+        <h3>Technology can reproduce or challenge inequality</h3>
+        <p>
+          Digital work, online education, telehealth, and social networks can
+          expand opportunity. The same technologies can intensify surveillance,
+          harassment, misinformation, algorithmic bias, and unequal access.
+          Families therefore prepare children for gender equality partly through
+          digital literacy: questioning recommendations, protecting privacy,
+          recognizing harassment, evaluating sources, and refusing to confuse
+          popularity with truth.
+        </p>
+        <div class="caution">
+          <strong>Global does not mean “somewhere else.”</strong> The United
+          States is part of the comparison. Analyzing other societies without
+          examining one’s own gendered laws, workplaces, families, and media is
+          itself ethnocentric.
+        </div>
+      </section>
+
+      <section class="card" id="concept-review">
+        <div class="tag">3.6 Concept review</div>
+        <h2>
+          Can you separate biology, identity, socialization, roles, and power?
+        </h2>
+        <p>
+          Choose the best sociological answer. Each item gives immediate
+          feedback; more than one concept may be relevant, but one is the
+          strongest response.
+        </p>
+        <div class="interactive-panel review-item" data-quiz>
+          <p>
+            <strong>1.</strong> A child receives construction toys from one
+            relative and dolls from another, enjoys both, and later chooses
+            engineering. What does this best demonstrate?
+          </p>
+          <div class="choice-grid">
+            <button data-correct="false">
+              Socialization always determines occupation</button
+            ><button data-correct="true">
+              Messages matter, but people interpret and resist them</button
+            ><button data-correct="false">
+              Chromosomes determine toy preference</button
+            ><button data-correct="false">Gender roles are absent</button>
+          </div>
+          <div class="quiz-feedback" aria-live="polite">Choose an answer.</div>
+        </div>
+        <div class="interactive-panel review-item" data-quiz>
+          <p>
+            <strong>2.</strong> A school dress code punishes girls more often
+            even though the rule uses neutral language. What should a
+            sociologist examine?
+          </p>
+          <div class="choice-grid">
+            <button data-correct="true">
+              Unequal enforcement and institutional effects</button
+            ><button data-correct="false">Only the written wording</button
+            ><button data-correct="false">Only individual biology</button
+            ><button data-correct="false">Fertility patterns</button>
+          </div>
+          <div class="quiz-feedback" aria-live="polite">Choose an answer.</div>
+        </div>
+        <div class="interactive-panel review-item" data-quiz>
+          <p>
+            <strong>3.</strong> A low-income immigrant woman’s workplace
+            experience is shaped simultaneously by gender, class, race, and
+            legal status. Which concept fits best?
+          </p>
+          <div class="choice-grid">
+            <button data-correct="false">Gender binary</button
+            ><button data-correct="false">Role exit</button
+            ><button data-correct="true">Intersectionality</button
+            ><button data-correct="false">Karyotype</button>
+          </div>
+          <div class="quiz-feedback" aria-live="polite">Choose an answer.</div>
+        </div>
+        <div class="interactive-panel review-item" data-quiz>
+          <p>
+            <strong>4.</strong> A father notices appointments, packs medicine,
+            arranges transportation, and remembers school deadlines. Which
+            often-invisible labor is he performing?
+          </p>
+          <div class="choice-grid">
+            <button data-correct="false">Occupational segregation</button
+            ><button data-correct="true">Mental load</button
+            ><button data-correct="false">Chromosomal sex</button
+            ><button data-correct="false">Gender identity</button>
+          </div>
+          <div class="quiz-feedback" aria-live="polite">Choose an answer.</div>
+        </div>
+        <div class="interactive-panel review-item" data-quiz>
+          <p>
+            <strong>5.</strong> A student says one country “has no gender
+            equality” after seeing a single photograph. What is the best
+            correction?
+          </p>
+          <div class="choice-grid">
+            <button data-correct="false">
+              Every society has identical gender roles</button
+            ><button data-correct="false">
+              Photographs reveal complete cultures</button
+            ><button data-correct="true">
+              Examine variation, history, institutions, and local voices</button
+            ><button data-correct="false">
+              Avoid all cross-cultural comparison
+            </button>
+          </div>
+          <div class="quiz-feedback" aria-live="polite">Choose an answer.</div>
+        </div>
+        <div class="review-score" id="reviewScore" aria-live="polite">
+          Score: 0 of 5 answered correctly on the first try.
+        </div>
+        <h3>Chapter synthesis</h3>
+        <p>
+          Gender is simultaneously personal and institutional. Bodies matter,
+          but bodies do not arrive with complete social instructions. Families
+          begin the earliest lessons; schools, peers, media, workplaces, law,
+          religion, and markets repeat or revise them. Those lessons shape
+          identity and expression, but also time, money, care, safety,
+          authority, and opportunity. Sociological analysis asks not only how
+          people differ, but how societies assign meaning to difference—and how
+          families and institutions can prepare every child to participate with
+          competence, dignity, and purpose.
+        </p>
+      </section>
+
+      <section class="card" id="terms">
+        <div class="tag">Study aid</div>
+        <h2>Key terms</h2>
+        <ul class="terms">
+          <li><strong>Chromosome:</strong> A structure containing DNA.</li>
+          <li>
+            <strong>Karyotype:</strong> An organized image of chromosomes.
+          </li>
+          <li>
+            <strong>X-bearing sperm:</strong> A sperm cell carrying an X
+            chromosome.
+          </li>
+          <li>
+            <strong>Y-bearing sperm:</strong> A sperm cell carrying a Y
+            chromosome.
+          </li>
+          <li>
+            <strong>Sex characteristics:</strong> Chromosomal, hormonal,
+            gonadal, anatomical, and physical traits associated with sex
+            development.
+          </li>
+          <li>
+            <strong>Differences of sex development:</strong> Variations in
+            chromosomes, genes, hormones, or anatomy that do not follow typical
+            pathways.
+          </li>
+          <li>
+            <strong>Gender identity:</strong> A person’s internal understanding
+            of gender.
+          </li>
+          <li>
+            <strong>Gender expression:</strong> The social communication of
+            gender.
+          </li>
+          <li>
+            <strong>Gender role:</strong> A social expectation attached to a
+            gender category.
+          </li>
+          <li>
+            <strong>Gender ideology:</strong> Beliefs that explain or justify
+            gender arrangements.
+          </li>
+          <li>
+            <strong>Patriarchy:</strong> A social system in which men as a group
+            disproportionately hold authority and resources.
+          </li>
+          <li>
+            <strong>Shettles method:</strong> An unsupported timing theory for
+            attempting to select a baby’s sex.
+          </li>
+          <li>
+            <strong>Sex ratio at birth:</strong> The number of male births
+            relative to female births in a population.
+          </li>
+          <li>
+            <strong>Gender-biased sex selection:</strong> Practices intended to
+            affect a child’s sex because one sex is socially preferred.
+          </li>
+          <li>
+            <strong>Son preference:</strong> A social system that gives greater
+            value, resources, or status to sons.
+          </li>
+          <li>
+            <strong>Trisomy:</strong> Three copies of a particular chromosome.
+          </li>
+          <li>
+            <strong>Monosomy:</strong> One copy of a chromosome instead of the
+            usual pair.
+          </li>
+          <li>
+            <strong>Assent:</strong> A child’s affirmative agreement to care or
+            research when the child cannot yet provide full legal consent.
+          </li>
+          <li>
+            <strong>Medical paternalism:</strong> Professionals overriding or
+            limiting patient choice because they believe they know what is best.
+          </li>
+          <li>
+            <strong>Bodily autonomy:</strong> A person’s right to participate in
+            decisions about their own body.
+          </li>
+          <li>
+            <strong>Gender socialization:</strong> Learning a society’s gender
+            meanings, expectations, and practices.
+          </li>
+          <li>
+            <strong>Hidden curriculum:</strong> Unwritten lessons communicated
+            through routines, rewards, discipline, and representation.
+          </li>
+          <li>
+            <strong>Doing gender:</strong> Producing and being held accountable
+            to gender in everyday interaction.
+          </li>
+          <li>
+            <strong>Intersectionality:</strong> Analysis of how systems such as
+            gender, race, and class combine.
+          </li>
+          <li>
+            <strong>Second shift:</strong> Unpaid household and care labor
+            performed after paid work.
+          </li>
+          <li>
+            <strong>Mental load:</strong> The work of anticipating, remembering,
+            and coordinating household needs.
+          </li>
+          <li>
+            <strong>Matrilineal:</strong> Tracing descent or inheritance through
+            the maternal line.
+          </li>
+          <li>
+            <strong>Matrifocal:</strong> Family organization in which mothers or
+            women are central to everyday kinship life.
+          </li>
+          <li>
+            <strong>Separate spheres:</strong> An ideology assigning men to
+            public life and women to domestic life.
+          </li>
+        </ul>
+      </section>
+
+      <section class="card" id="references">
+        <div class="tag">Section Three</div>
+        <h2>References</h2>
+        <ul class="sources">
+          <li>
+            Historic Royal Palaces. (n.d.).
+            <em>Henry VIII’s wives: Six queens, six women</em>.
+            <a
+              href="https://www.hrp.org.uk/hampton-court-palace/history-and-stories/henry-viiis-wives/"
+              >https://www.hrp.org.uk/hampton-court-palace/history-and-stories/henry-viiis-wives/</a
+            >
+          </li>
+          <li>
+            MedlinePlus. (2026). <em>Genetics</em>. U.S. National Library of
+            Medicine.
+            <a href="https://medlineplus.gov/ency/article/002048.htm"
+              >https://medlineplus.gov/ency/article/002048.htm</a
+            >
+          </li>
+          <li>
+            Wilcox, A. J., Weinberg, C. R., &amp; Baird, D. D. (1995). Timing of
+            sexual intercourse in relation to ovulation: Effects on the
+            probability of conception, survival of the pregnancy, and sex of the
+            baby. <em>New England Journal of Medicine, 333</em>(23), 1517–1521.
+            <a href="https://doi.org/10.1056/NEJM199512073332301"
+              >https://doi.org/10.1056/NEJM199512073332301</a
+            >
+          </li>
+          <li>
+            Fausto-Sterling, A. (1993). The five sexes: Why male and female are
+            not enough. <em>The Sciences, 33</em>(2), 20–24.
+            <a href="https://doi.org/10.1002/j.2326-1951.1993.tb03081.x"
+              >https://doi.org/10.1002/j.2326-1951.1993.tb03081.x</a
+            >
+          </li>
+          <li>
+            MedlinePlus Genetics. (2023). <em>Klinefelter syndrome</em>. U.S.
+            National Library of Medicine.
+            <a
+              href="https://medlineplus.gov/genetics/condition/klinefelter-syndrome/"
+              >https://medlineplus.gov/genetics/condition/klinefelter-syndrome/</a
+            >
+          </li>
+          <li>
+            MedlinePlus Genetics. (n.d.).
+            <em>Trisomy X; 47,XYY syndrome; Turner syndrome</em>. U.S. National
+            Library of Medicine.
+            <a href="https://medlineplus.gov/genetics/"
+              >https://medlineplus.gov/genetics/</a
+            >
+          </li>
+          <li>
+            United Nations Population Fund. (2020).
+            <em>Preventing gender-biased sex selection and son preference</em>.
+            <a
+              href="https://www.unfpa.org/resources/preventing-gender-biased-sex-selection-and-son-preference"
+              >https://www.unfpa.org/resources/preventing-gender-biased-sex-selection-and-son-preference</a
+            >
+          </li>
+          <li>
+            Diamond, M., &amp; Sigmundson, H. K. (1997). Sex reassignment at
+            birth: Long-term review and clinical implications.
+            <em>Archives of Pediatrics &amp; Adolescent Medicine, 151</em>(3),
+            298–304.
+            <a href="https://doi.org/10.1001/archpedi.1997.02170400084015"
+              >https://doi.org/10.1001/archpedi.1997.02170400084015</a
+            >
+          </li>
+          <li>
+            Embryo Project Encyclopedia. (2017).
+            <em
+              >David Reimer and John Money gender reassignment controversy: The
+              John/Joan case</em
+            >. Arizona State University.
+            <a
+              href="https://embryo.asu.edu/pages/david-reimer-and-john-money-gender-reassignment-controversy-johnjoan-case"
+              >https://embryo.asu.edu/pages/david-reimer-and-john-money-gender-reassignment-controversy-johnjoan-case</a
+            >
+          </li>
+          <li>
+            Colapinto, J. (2000).
+            <em>As nature made him: The boy who was raised as a girl</em>.
+            HarperCollins.
+          </li>
+          <li>
+            Connell, R. W. (2005). <em>Masculinities</em> (2nd ed.). University
+            of California Press.
+          </li>
+          <li>
+            Crenshaw, K. (1989). Demarginalizing the intersection of race and
+            sex. <em>University of Chicago Legal Forum, 1989</em>(1), Article 8.
+          </li>
+          <li>
+            Kerber, L. K. (1988). Separate spheres, female worlds, woman’s
+            place: The rhetoric of women’s history.
+            <em>Journal of American History, 75</em>(1), 9–39.
+            <a href="https://doi.org/10.2307/1889653"
+              >https://doi.org/10.2307/1889653</a
+            >
+          </li>
+          <li>
+            West, C., &amp; Zimmerman, D. H. (1987). Doing gender.
+            <em>Gender &amp; Society, 1</em>(2), 125–151.
+            <a href="https://doi.org/10.1177/0891243287001002002"
+              >https://doi.org/10.1177/0891243287001002002</a
+            >
+          </li>
+          <li>
+            UN Women. (2025).
+            <em
+              >Care: A critical investment for gender equality and the rights of
+              women and girls</em
+            >.
+            <a
+              href="https://www.unwomen.org/en/articles/explainer/care-a-critical-investment-for-gender-equality-and-the-rights-of-women-and-girls"
+              >https://www.unwomen.org/en/articles/explainer/care-a-critical-investment-for-gender-equality-and-the-rights-of-women-and-girls</a
+            >
+          </li>
+        </ul>
+        <h3>Image notes</h3>
+        <p>
+          The Henry VIII and six wives illustration was generated specifically
+          for this SOC-213 coursebook. It is an interpretive teaching image, not
+          evidence of a shared historical event. The David Reimer timeline and
+          medical-ethics illustrations were generated specifically for this
+          coursebook; they are symbolic and do not depict his actual appearance.
+          The gender-socialization, care-work, and global-gender illustrations
+          were also generated for this coursebook and are conceptual teaching
+          images rather than documentary photographs.
+        </p>
+      </section>
+    </main>
+    </div>
+    <script>
+      document.querySelectorAll(".activity button").forEach(function (b) {
+        b.addEventListener("click", function () {
+          var open = b.getAttribute("aria-expanded") === "true";
+          b.setAttribute("aria-expanded", String(!open));
+          b.classList.toggle("open", !open);
+        });
+      });
+      function updateSpectra() {
+        var power = Number(document.getElementById("powerSpectrum").value);
+        var trait = Number(document.getElementById("traitSpectrum").value);
+        document.getElementById("powerResult").innerHTML =
+          power < 34
+            ? "<strong>Patriarchal organization:</strong> men as a group disproportionately control formal authority, property, inheritance, or family decisions. Households can vary within the larger system."
+            : power > 66
+              ? "<strong>Matrilineal or women-centered organization:</strong> descent, inheritance, residence, or everyday kinship may center women. This does not by itself prove female domination."
+              : "<strong>Shared or egalitarian organization:</strong> authority, resources, care, and decisions are negotiated without assigning control by gender. Equality is assessed in practice, not only stated as an ideal.";
+        document.getElementById("traitResult").innerHTML =
+          trait < 34
+            ? "<strong>Historically feminine-coded:</strong> nurturance, beauty, emotion, cooperation, domesticity, and deference. The label is cultural; people of every gender can possess these capacities."
+            : trait > 66
+              ? "<strong>Historically masculine-coded:</strong> toughness, rationality, breadwinning, competition, authority, and physical strength. The label is cultural; people of every gender can possess these capacities."
+              : "<strong>Mixed or uncoded:</strong> creativity, intelligence, courage, leadership, technical skill, caregiving, and emotional insight can be taught as human capacities rather than gender property.";
+      }
+      ["powerSpectrum", "traitSpectrum"].forEach(function (id) {
+        document.getElementById(id).addEventListener("input", updateSpectra);
+      });
+      updateSpectra();
+
+      document
+        .querySelectorAll("[data-quiz] .choice-grid button")
+        .forEach(function (button) {
+          button.addEventListener("click", function () {
+            var panel = button.closest("[data-quiz]");
+            var correct = button.dataset.correct === "true";
+            if (
+              panel.classList.contains("review-item") &&
+              !panel.dataset.attempted
+            ) {
+              panel.dataset.attempted = "true";
+              panel.dataset.firstTryCorrect = String(correct);
+              var firstTryScore = document.querySelectorAll(
+                '.review-item[data-first-try-correct="true"]',
+              ).length;
+              document.getElementById("reviewScore").textContent =
+                "Score: " +
+                firstTryScore +
+                " of 5 answered correctly on the first try.";
+            }
+            button.classList.add(correct ? "correct" : "incorrect");
+            panel.querySelector(".quiz-feedback").textContent = correct
+              ? "Correct. Use the concept to explain both the pattern and the social mechanism producing it."
+              : "Not quite. Try again and look for the answer that connects expectations to unequal evaluation.";
+          });
+        });
+
+      function updateCare() {
+        var a = Number(document.getElementById("careA").value) || 0;
+        var b = Number(document.getElementById("careB").value) || 0;
+        var difference = Math.abs(a - b);
+        var person =
+          a === b ? "Neither person" : a > b ? "Person A" : "Person B";
+        document.getElementById("careResult").textContent =
+          a === b
+            ? "The entered care hours are equal. Next ask whether mental load, rest, and decision-making are also shared."
+            : person +
+              " performs " +
+              difference +
+              " more hours each week—about " +
+              (difference * 52).toLocaleString() +
+              " hours across a year.";
+      }
+      ["careA", "careB"].forEach(function (id) {
+        document.getElementById(id).addEventListener("input", updateCare);
+      });
+      var lensText = {
+        education:
+          "<strong>Education:</strong> Gender gaps differ by level and place. Poverty, conflict, caregiving, safety, school costs, disability access, and labor markets can shape attendance and completion. Enrollment alone does not reveal curriculum bias, harassment, learning, or later opportunity.",
+        work: "<strong>Work:</strong> Compare labor-force access, job segregation, wages, legal protection, migration status, informality, promotion, and control over earnings. The same occupation may carry different status or security across societies.",
+        care: "<strong>Care:</strong> Ask who performs childcare, elder care, cooking, cleaning, emotional support, and coordination—and whether that work is paid, protected, shared, or supported by public policy.",
+        policy:
+          "<strong>Law and policy:</strong> Formal equality may differ from lived access. Compare inheritance, citizenship, education, reproductive healthcare, parental leave, childcare, violence prevention, enforcement, and people’s ability to claim their rights.",
+      };
+      document.querySelectorAll("[data-lens]").forEach(function (button) {
+        button.addEventListener("click", function () {
+          document.querySelectorAll("[data-lens]").forEach(function (other) {
+            other.setAttribute("aria-pressed", String(other === button));
+          });
+          document.getElementById("lensResult").innerHTML =
+            lensText[button.dataset.lens];
+        });
+      });
+    </script>
+    <script src="assets/family-book-links.js" data-section="3"></script>
+  </body>
+</html>
