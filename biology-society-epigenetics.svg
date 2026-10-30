@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Biology and society influence one another across development</title>
+  <desc id="desc">A circular educational diagram. Biology, including inherited variation and development, interacts with social experiences such as caregiving, safety, nutrition, learning, discrimination, and public policy. These influences affect stress regulation, learning, health, and gene expression over time. Protective relationships and resources can support adaptation, but outcomes are never guaranteed by one gene or one experience.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#edf8f6"/><stop offset="1" stop-color="#fff6df"/></linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#0d5961"/></marker>
+    <filter id="shadow"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#17384a" flood-opacity=".16"/></filter>
+  </defs>
+  <rect width="1200" height="760" rx="32" fill="url(#bg)"/>
+  <text x="600" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#17384a">Development is biological and social</text>
+  <text x="600" y="91" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#425660">Genes are not blueprints for destiny; environments do not write on a blank slate.</text>
+  <g filter="url(#shadow)">
+    <rect x="70" y="145" width="330" height="220" rx="24" fill="#17384a"/>
+    <text x="235" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="white">BIOLOGY</text>
+    <text x="105" y="230" font-family="Arial, sans-serif" font-size="18" fill="white">• Inherited genetic variation</text>
+    <text x="105" y="264" font-family="Arial, sans-serif" font-size="18" fill="white">• Prenatal and brain development</text>
+    <text x="105" y="298" font-family="Arial, sans-serif" font-size="18" fill="white">• Temperament and physiology</text>
+    <text x="105" y="332" font-family="Arial, sans-serif" font-size="18" fill="white">• Sensitivity to environments</text>
+    <rect x="800" y="145" width="330" height="220" rx="24" fill="#0d5961"/>
+    <text x="965" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="white">SOCIAL WORLD</text>
+    <text x="835" y="230" font-family="Arial, sans-serif" font-size="18" fill="white">• Caregiving and relationships</text>
+    <text x="835" y="264" font-family="Arial, sans-serif" font-size="18" fill="white">• Safety, stress, and belonging</text>
+    <text x="835" y="298" font-family="Arial, sans-serif" font-size="18" fill="white">• Nutrition, toxins, and housing</text>
+    <text x="835" y="332" font-family="Arial, sans-serif" font-size="18" fill="white">• Schools, work, policy, culture</text>
+  </g>
+  <path d="M410 222 C530 150 670 150 790 222" fill="none" stroke="#0d5961" stroke-width="7" marker-end="url(#arrow)"/>
+  <path d="M790 306 C670 390 530 390 410 306" fill="none" stroke="#0d5961" stroke-width="7" marker-end="url(#arrow)"/>
+  <g filter="url(#shadow)"><circle cx="600" cy="265" r="112" fill="#fffef9" stroke="#e1a63a" stroke-width="8"/></g>
+  <path d="M560 205 C530 225 530 255 560 275 C590 295 590 325 560 342" fill="none" stroke="#d96e50" stroke-width="10" stroke-linecap="round"/>
+  <path d="M640 205 C670 225 670 255 640 275 C610 295 610 325 640 342" fill="none" stroke="#315f83" stroke-width="10" stroke-linecap="round"/>
+  <g stroke="#7d8790" stroke-width="3"><path d="M558 220L642 220"/><path d="M548 245L652 245"/><path d="M553 272L647 272"/><path d="M548 299L652 299"/><path d="M558 327L642 327"/></g>
+  <text x="600" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#17384a">GENE EXPRESSION</text>
+  <text x="600" y="411" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#425660">how cells use genetic information</text>
+  <path d="M600 425L600 480" stroke="#0d5961" stroke-width="7" marker-end="url(#arrow)"/>
+  <g filter="url(#shadow)"><rect x="135" y="495" width="930" height="170" rx="26" fill="white" stroke="#d9e2df"/></g>
+  <text x="600" y="535" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#17384a">Possible developmental pathways—not fixed outcomes</text>
+  <g font-family="Arial, sans-serif" font-size="18" fill="#22313a">
+    <text x="185" y="580">Stress regulation</text><text x="422" y="580">Learning and memory</text><text x="680" y="580">Physical and mental health</text><text x="945" y="580">Social participation</text>
+  </g>
+  <g stroke="#e1a63a" stroke-width="5"><path d="M185 595H325"/><path d="M422 595H585"/><path d="M680 595H890"/><path d="M945 595H1015"/></g>
+  <text x="600" y="637" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#0d5961">Responsive care • safety • purpose • treatment • education • material support</text>
+  <text x="600" y="712" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#425660">Risk is not destiny. Protective conditions can widen developmental possibilities at every stage.</text>
+</svg>
